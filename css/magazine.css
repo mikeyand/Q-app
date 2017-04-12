@@ -37,8 +37,9 @@ body{
 	position:absolute;
 	overflow:hidden;
 	background:#ffffff;
+	box-shadow: 7px 7px 5px #888888;
 	opacity:0.5;
-	border: 2px solid #333;
+	border: 2px solid #cdcdcd;
 	-webkit-border-radius:100%;
 	-moz-border-radius:100%;
 	-ms-border-radius:100%;
