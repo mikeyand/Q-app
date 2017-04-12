@@ -36,8 +36,9 @@ body{
 .magazine .region{
 	position:absolute;
 	overflow:hidden;
-	background:#0066FF;
-	opacity:0.2;
+	background:#ffffff;
+	opacity:0.5;
+	border: 2px solid #333;
 	-webkit-border-radius:100%;
 	-moz-border-radius:100%;
 	-ms-border-radius:100%;
