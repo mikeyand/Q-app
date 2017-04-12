@@ -9,7 +9,6 @@
 <head>
 <title>Using turn.js and the new zoom feature</title>
 <meta name="viewport" content="width = 1050, user-scalable = no" />
-<!-- <script type="text/javascript" src="../../extras/jquery.min.1.7.js"></script> -->
 <script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
@@ -39,22 +38,11 @@
 </div>
 
 
-<script>
-
-	$(document).ready(function(){
-		$('.page').on('click', function() {
-			alert('sdfsd');
-		});
-	});
-
-</script>
-
-
 <!-- Thumbnails -->
 <div class="thumbnails">
 	<div class="container">
 	<div class="row">
-		<div class="one">
+		<div class="one" style="display:none;">
 			<h2>Marginal Medallion</h2>
 			<p>Inscribed with the word “two hundred,” this illuminated roundel indicates that the reader has reached the two hundredth verse of the chapter. The Qur’anic text is written in Arabic, which reads from right to left.</p>
 		</div>
@@ -459,6 +447,12 @@ yepnope({
 	both: ['lib/zoom.min.js', 'js/magazine.js', 'css/magazine.css'],
 	complete: loadApp
 });
+setTimeout(function(){
+	$('.region.text-one').on('click', function() {
+		$('.one').fadeIn();
+	});
+}, 500);
+
 
 </script>
 
