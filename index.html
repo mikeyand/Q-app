@@ -15,9 +15,6 @@
   crossorigin="anonymous"></script>
 <script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
 <script type="text/javascript" src="lib/hash.js"></script>
-<!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
 
 </head>
 <body>
@@ -42,10 +39,27 @@
 <div class="thumbnails">
 	<div class="container">
 	<div class="row">
-		<div class="one" style="display:none;">
+		<div class="one popText">
 			<h2>Marginal Medallion</h2>
 			<p>Inscribed with the word “two hundred,” this illuminated roundel indicates that the reader has reached the two hundredth verse of the chapter. The Qur’anic text is written in Arabic, which reads from right to left.</p>
 		</div>
+		<div class="two popText">
+			<h2>IKufic Script</h2>
+			<p>The text is copied in an angular script known as kufic. It is based on a strict geometric structure, which allows the calligrapher to elongate horizontal elements for dramatic effect.</p>
+		</div>
+		<div class="three popText">
+			<h2>Parchment</h2>
+			<p>This Qur’an was written on parchment, most likely made from sheepskin. As each page measures 24.5 x 33 cm, one animal skin would have created only about six pages, making the manuscript extremely expensive.</p>
+		</div>
+		<div class="four popText">
+			<h2>Marginal Medallion</h2>
+			<p>Inscribed with the word “two hundred,” this illuminated roundel indicates that the reader has reached the two hundredth verse of the chapter. The Qur’anic text is written in Arabic, which reads from right to left.</p>
+		</div>
+		<div class="five popText">
+			<h2>Marginal Medallion</h2>
+			<p>Inscribed with the word “two hundred,” this illuminated roundel indicates that the reader has reached the two hundredth verse of the chapter. The Qur’anic text is written in Arabic, which reads from right to left.</p>
+		</div>
+
 	</div>
 </div>
 </div>
@@ -71,11 +85,11 @@ function loadApp() {
 
 			// Magazine width
 
-			width: 1522,
+			width: 1200,
 
 			// Magazine height
 
-			height: 600,
+			height: 446,
 
 			// Duration in millisecond
 
@@ -449,7 +463,16 @@ yepnope({
 });
 setTimeout(function(){
 	$('.region.text-one').on('click', function() {
-		$('.one').fadeIn();
+		$('.popText').fadeOut(100);
+		$('.one').fadeIn(700);
+	});
+	$('.region.text-two').on('click', function() {
+		$('.popText').fadeOut(100);
+		$('.two').fadeIn(700);
+	});
+	$('.region.text-three').on('click', function() {
+		$('.popText').fadeOut(100);
+		$('.three').fadeIn(700);
 	});
 }, 500);
 
