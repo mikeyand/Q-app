@@ -23,7 +23,7 @@
 </head>
 <body>
 
-<div id="canvas">
+<div id="canvas" class="remodal-bg">
 
 <div class="zoom-icon zoom-icon-in"></div>
 
@@ -31,22 +31,25 @@
 	<div class="container">
 		<div class="magazine">
 			<!-- Next button -->
-			<div ignore="1" class="next-button"></div>
+			<!-- <div ignore="1" class="next-button"></div> -->
 			<!-- Previous button -->
-			<div ignore="1" class="previous-button"></div>
+			<!-- <div ignore="1" class="previous-button"></div> -->
 		</div>
 	</div>
 </div>
 </div>
 
+
+
 <!-- Thumbnails -->
 <div class="thumbnails">
 	<div class="container">
 	<div class="row">
-		<div class="one popText">
-			<h2>Marginal Medallion</h2>
-			<p>Inscribed with the word “two hundred,” this illuminated roundel indicates that the reader has reached the two hundredth verse of the chapter. The Qur’anic text is written in Arabic, which reads from right to left.</p>
-		</div>
+    <div class="remodal" data-remodal-id="modal" data-remodal-options="hashTracking: false">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <h2>Marginal Medallion</h2>
+      <p>Inscribed with the word “two hundred,” this illuminated roundel indicates that the reader has reached the two hundredth verse of the chapter. The Qur’anic text is written in Arabic, which reads from right to left.</p>
+    </div>
 		<div class="two popText">
 			<h2>IKufic Script</h2>
 			<p>The text is copied in an angular script known as kufic. It is based on a strict geometric structure, which allows the calligrapher to elongate horizontal elements for dramatic effect.</p>
@@ -465,18 +468,8 @@ yepnope({
 	complete: loadApp
 });
 setTimeout(function(){
-	$('.region.text-one').on('click', function() {
-		$('.popText').fadeOut(100);
-		$('.one').fadeIn(700);
-	});
-	$('.region.text-two').on('click', function() {
-		$('.popText').fadeOut(100);
-		$('.two').fadeIn(700);
-	});
-	$('.region.text-three').on('click', function() {
-		$('.popText').fadeOut(100);
-		$('.three').fadeIn(700);
-	});
+  $('.region.text-one').attr("data-remodal-target", "modal");
+  $('.region.text-one').attr("href", "#");
 }, 500);
 
 
