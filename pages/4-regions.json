@@ -3,13 +3,13 @@
 	"y":0,
 	"width":80,
 	"height":80,
-	"class":""
+	"class":"text-six"
 },
 {
 	"x":30,
 	"y":140,
 	"width":160,
 	"height":160,
-	"class":""
+	"class":"text-seven"
 }
 ]
