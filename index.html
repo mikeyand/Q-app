@@ -22,21 +22,29 @@
 <link href="css/remodal-default-theme.css" rel="stylesheet" type="text/css">
 <link href="css/remodal.css" rel="stylesheet" type="text/css">
 
+<script>
+  $(document).ready(function(){
+    $('.q-text').click(function(){
+        $('.region').fadeIn();
+    });
+  });
+</script>
+
 </head>
 <body>
 
 <div id="canvas" class="remodal-bg">
-  <div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default">
-    <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
-  </button>
-  <button type="button" class="btn btn-default">
-    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
-  </button>
-  <button type="button" class="btn btn-default">
-    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-  </button>
-</div>
+  <div class="button-container">
+    <button type="button" class="btn btn-default zoom-icon-in zoom-icon">
+      <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
+    </button>
+    <button type="button" style="display:block !important" class="btn btn-default q-text show-t" data-toggle="button" aria-pressed="false" autocomplete="off">
+      <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+    </button>
+    <button type="button" class="btn btn-default">
+      <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+    </button>
+  </div>
 
 <div class="zoom-icon zoom-icon-in"></div>
 
@@ -90,38 +98,38 @@
     </div>
     <div class="remodal" data-remodal-id="modal7" data-remodal-options="hashTracking: false">
       <button data-remodal-action="close" class="remodal-close"></button>
-      <h2>Justification</h2>
-			<p>Here, the calligrapher carefully transcribed the text in five neat lines of equal length. The text is bordered on three sides by wide margins, which protect it but also required additional sheets of parchment.</p>
+      <h2>Faded Text</h2>
+			<p>This side of the sheet once faced the animal’s internal organs, so it is often called the “flesh side.” Compared to the opposite side—known as the “hair side”—this one is often whiter in color, smoother to the touch, and sometimes shinier. As it also tends to be oilier, the flesh side does not preserve ink as well as the hair side does.</p>
     </div>
     <div class="remodal" data-remodal-id="modal8" data-remodal-options="hashTracking: false">
       <button data-remodal-action="close" class="remodal-close"></button>
-      <h2>Justification</h2>
-			<p>Here, the calligrapher carefully transcribed the text in five neat lines of equal length. The text is bordered on three sides by wide margins, which protect it but also required additional sheets of parchment.</p>
+      <h2>Parchment</h2>
+			<p>The skin’s hair side creates parchment sheets that are yellower and less smooth than the flesh-side ones. Hair-side pages also are better at preserving the ink. Sometimes, it’s possible to see remaining hair follicles on the surface.</p>
     </div>
     <div class="remodal" data-remodal-id="modal9" data-remodal-options="hashTracking: false">
       <button data-remodal-action="close" class="remodal-close"></button>
-      <h2>Justification</h2>
-			<p>Here, the calligrapher carefully transcribed the text in five neat lines of equal length. The text is bordered on three sides by wide margins, which protect it but also required additional sheets of parchment.</p>
+      <h2>Calligraphy</h2>
+			<p>The calligrapher cleverly manipulated strokes, extending and contracting horizontal elements to create stunning visual effects. Here, the second letter of the word fi (in) is pulled backward in one long stroke. Two lines down, the calligrapher wrote the same word, this time with tight curves.</p>
     </div>
     <div class="remodal" data-remodal-id="modal10" data-remodal-options="hashTracking: false">
       <button data-remodal-action="close" class="remodal-close"></button>
-      <h2>Justification</h2>
-			<p>Here, the calligrapher carefully transcribed the text in five neat lines of equal length. The text is bordered on three sides by wide margins, which protect it but also required additional sheets of parchment.</p>
+      <h2>Calligraphy</h2>
+			<p>Here, the curves of the word fi (in) differ dramatically from the elongated, flowing version above. The difference in form reveals the calligrapher’s skill.</p>
     </div>
     <div class="remodal" data-remodal-id="modal11" data-remodal-options="hashTracking: false">
       <button data-remodal-action="close" class="remodal-close"></button>
-      <h2>Justification</h2>
-			<p>Here, the calligrapher carefully transcribed the text in five neat lines of equal length. The text is bordered on three sides by wide margins, which protect it but also required additional sheets of parchment.</p>
+      <h2>Verse Marker</h2>
+			<p>This gold symbol marks every fifth verse. It denotes that the reader has reached verse 205.</p>
     </div>
     <div class="remodal" data-remodal-id="modal12" data-remodal-options="hashTracking: false">
       <button data-remodal-action="close" class="remodal-close"></button>
-      <h2>Justification</h2>
-			<p>Here, the calligrapher carefully transcribed the text in five neat lines of equal length. The text is bordered on three sides by wide margins, which protect it but also required additional sheets of parchment.</p>
+      <h2>Short Vowel</h2>
+			<p>Arabic has no letters to represent short vowels. Small red dots signify these sounds to help readers avoid mistakes when reciting the text. A dot above the letter indicates the short “a” sound, as heard in the word hat.</p>
     </div>
     <div class="remodal" data-remodal-id="modal13" data-remodal-options="hashTracking: false">
       <button data-remodal-action="close" class="remodal-close"></button>
-      <h2>Justification</h2>
-			<p>Here, the calligrapher carefully transcribed the text in five neat lines of equal length. The text is bordered on three sides by wide margins, which protect it but also required additional sheets of parchment.</p>
+      <h2>Short Vowel</h2>
+			<p>This dot below the letter indicates the short “i” sound, as heard in the world bit.</p>
     </div>
 
 
@@ -184,6 +192,8 @@ function loadApp() {
 			direction: "rtl",
 
 			option: 2,
+
+      corners: 'r',
 
 			// Events
 
@@ -539,7 +549,10 @@ setTimeout(function(){
   $('.region.text-eleven').attr("data-remodal-target", "modal11");
   $('.region.text-twelve').attr("data-remodal-target", "modal12");
   $('.region.text-thirteen').attr("data-remodal-target", "modal13");
+
 }, 500);
+
+
 
 
 </script>

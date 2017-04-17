@@ -11,6 +11,17 @@
    Remodal's necessary styles
    ========================================================================== */
 
+h2 {
+  font-size: 20px !important;
+  font-weight: bold;
+  line-height: 2;
+  color: #5a4d43;
+}
+
+p {
+  color: #5a4d43;
+}
+
 /* Hide scroll bar */
 
 html.remodal-is-locked {
@@ -79,9 +90,9 @@ html.remodal-is-locked {
 
 .remodal {
   position: relative;
-
+  text-align: left;
   outline: none;
-
+  background: #efe7dd;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;

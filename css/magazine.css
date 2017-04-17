@@ -1,8 +1,18 @@
 body{
 	overflow:hidden;
-	background-color:#fcfcfc;
+	background-color:#efe7dd !important;
 	margin:0;
 	padding:0;
+}
+
+.btn-default {
+	color: #312014 !important;
+	background-color: transparent !important;
+	border-color: #312014 !important;
+	border-radius: 100% !important;
+	height: 50px !important;
+	width: 50px !important;
+	float: right !important;
 }
 
 .magazine-viewport .container{
@@ -36,10 +46,8 @@ body{
 .magazine .region{
 	position:absolute;
 	overflow:hidden;
-	background:#ffffff;
 	box-shadow: 7px 7px 5px #888888;
-	opacity:0.5;
-	border: 2px solid #cdcdcd;
+	border: 3px solid #ffffff;
 	-webkit-border-radius:100%;
 	-moz-border-radius:100%;
 	-ms-border-radius:100%;
@@ -48,6 +56,7 @@ body{
 	cursor:pointer;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
 	filter: alpha(opacity=20);
+	display: none;
 }
 
 .magazine .region:hover{
@@ -349,7 +358,7 @@ body{
 	border-radius:10px;
 }
 
-.zoom-icon{
+/*.zoom-icon{
 	position:absolute;
 	z-index:1000;
 	width:22px;
@@ -377,7 +386,7 @@ body{
 .zoom-icon-out.zoom-icon-out-hover{
 	background-position:-66px 0;
 	cursor: pointer;
-}
+}*/
 
 .bottom{
 	position:absolute;

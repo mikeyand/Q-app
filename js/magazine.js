@@ -29,7 +29,7 @@ function loadPage(page, pageElement) {
 	var img = $('<img />');
 
 	img.mousedown(function(e) {
-		e.defaultPrevented();
+		e.preventDefault();
 	});
 
 	img.on('load', function() {

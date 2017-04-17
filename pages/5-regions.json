@@ -3,20 +3,20 @@
 	"y":10,
 	"width":80,
 	"height":80,
-	"class":""
+	"class":"text-eight"
 },
 {
 	"x":310,
 	"y":130,
 	"width":80,
 	"height":80,
-	"class":""
+	"class":"text-nine"
 },
 {
 	"x":310,
 	"y":240,
 	"width":80,
 	"height":80,
-	"class":""
+	"class":"text-ten"
 }
 ]
