@@ -24,9 +24,17 @@
 
 <script>
   $(document).ready(function(){
-    $('.q-text').click(function(){
-        $('.region').fadeIn();
-    });
+
+      var toggleState = true;
+      $('.q-text').on("click", function() {
+        if(toggleState) {
+          $('.region').fadeIn();
+        } else {
+          $('.region').fadeOut();
+        }
+        toggleState = !toggleState;
+      });
+
   });
 </script>
 
@@ -38,10 +46,10 @@
     <button type="button" class="btn btn-default zoom-icon-in zoom-icon">
       <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
     </button>
-    <button type="button" style="display:block !important" class="btn btn-default q-text show-t" data-toggle="button" aria-pressed="false" autocomplete="off">
+    <button type="button" class="btn btn-default q-text" data-toggle="button" aria-pressed="false" autocomplete="off">
       <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
     </button>
-    <button type="button" class="btn btn-default">
+    <button type="button" class="btn btn-default home">
       <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
     </button>
   </div>
