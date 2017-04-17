@@ -201,12 +201,17 @@ function loadApp() {
 
 			option: 2,
 
-      corners: 'r',
-
 			// Events
 
 			when: {
+        start: function(event, pageObject, corner) {
+          if (pageObject.next==1)
+            event.preventDefault();
+        },
 				turning: function(event, page, view) {
+
+          if (page==1)
+          event.preventDefault();
 
 					var book = $(this),
 					currentPage = book.turn('page'),
@@ -239,9 +244,9 @@ function loadApp() {
 
 					$(this).turn('center');
 
-					if (page==1) {
-						$(this).turn('peel', 'br');
-					}
+					// if (page==1) {
+					// 	$(this).turn('peel', 'br');
+					// }
 
 				},
 
