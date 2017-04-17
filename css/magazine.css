@@ -5,6 +5,10 @@ body{
 	padding:0;
 }
 
+.remodal-wrapper {
+	margin-top: 37%;
+}
+
 .button-container {
 	width: 1200px;
 	position: absolute;
