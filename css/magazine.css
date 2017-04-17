@@ -24,6 +24,11 @@ body{
 	width: 55px !important;
 	float: right !important;
 	margin-right: 15px;
+	opacity: 0.4;
+}
+
+.btn-default.active {
+	opacity: 1;
 }
 
 .btn {
