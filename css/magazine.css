@@ -33,6 +33,7 @@ body{
 
 .btn-default.active {
 	opacity: 1;
+	box-shadow: none !important;
 }
 
 .btn {
