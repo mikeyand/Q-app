@@ -84,12 +84,12 @@ body{
 	display: none;
 }
 
-.magazine .region:hover{
+/*.magazine .region:hover{
 	opacity:0.5;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 	filter: alpha(opacity=50);
 	border: 2px solid #333;
-}
+}*/
 
 .magazine .region.zoom{
 	opacity:0.01;

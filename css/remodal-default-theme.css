@@ -15,15 +15,15 @@
 
 .remodal-bg.remodal-is-opening,
 .remodal-bg.remodal-is-opened {
-  -webkit-filter: blur(3px);
-  filter: blur(3px);
+  /*-webkit-filter: blur(3px);
+  filter: blur(3px);*/
 }
 
 /* Default theme styles of the overlay */
 
 .remodal-overlay {
   background: rgba(43, 46, 56, 0.9);
-  background: rgba(119, 115, 110, 0.6);
+  background: rgba(78, 75, 70, 0.6);
 }
 
 .remodal-overlay.remodal-is-opening,
