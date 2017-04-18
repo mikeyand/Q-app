@@ -71,7 +71,7 @@ body{
 .magazine .region{
 	position:absolute;
 	overflow:hidden;
-	box-shadow: 7px 7px 5px #888888;
+	box-shadow: 7px 7px 10px #423b3b;
 	border: 3px solid #ffffff;
 	-webkit-border-radius:100%;
 	-moz-border-radius:100%;
