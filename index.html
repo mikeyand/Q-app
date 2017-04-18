@@ -17,6 +17,7 @@
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="lib/hash.js"></script>
 <script type="text/javascript" src="lib/remodal.js"></script>
+<script type="text/javascript" src="extras/jquery-play-sound.js"></script>
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="css/remodal-default-theme.css" rel="stylesheet" type="text/css">
@@ -209,7 +210,7 @@ function loadApp() {
             event.preventDefault();
         },
 				turning: function(event, page, view) {
-
+          $.playSound("page-flip-03");
           if (page==1)
           event.preventDefault();
 
