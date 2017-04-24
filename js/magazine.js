@@ -205,7 +205,7 @@ function isChrome() {
 }
 
 function disableControls(page) {
-		if (page==1)
+		if (page==2)
 			$('.previous-button').hide();
 		else
 			$('.previous-button').show();
@@ -227,8 +227,9 @@ function resizeViewport() {
 	$('.magazine').removeClass('animated');
 
 	$('.magazine-viewport').css({
-		width: width,
-		height: height
+		width: width - 100,
+		height: height,
+		left: 50
 	}).
 	zoom('resize');
 
@@ -252,11 +253,11 @@ function resizeViewport() {
 			if ($('.magazine').turn('page')==1)
 				$('.magazine').turn('peel', 'br');
 
-			$('.next-button').css({height: bound.height, backgroundPosition: '-38px '+(bound.height/2-32/2)+'px'});
-			$('.previous-button').css({height: bound.height, backgroundPosition: '-4px '+(bound.height/2-32/2)+'px'});
+			// $('.next-button').css({height: bound.height, backgroundPosition: '-38px '+(bound.height/2-32/2)+'px'});
+			// $('.previous-button').css({height: bound.height, backgroundPosition: '-4px '+(bound.height/2-32/2)+'px'});
 		}
 
-		$('.magazine').css({top: -bound.height/2, left: -bound.width/2});
+		$('.magazine').css({top: -bound.height/2 + 50, left: -bound.width/2 - 15});
 	}
 
 	var magazineOffset = $('.magazine').offset(),
@@ -383,3 +384,33 @@ function calculateBound(d) {
 
 	return bound;
 }
+
+// window.addEventListener('resize', function (e) {
+//     var size = resize(el);
+//     $(el).turn('size', size.width, size.height);
+// });
+//
+// function resize(el) {
+//     // reset the width and height to the css defaults
+//     el.style.width = '';
+//     el.style.height = '';
+//
+//     var width = el.clientWidth,
+//         height = Math.round(width / this.ratio),
+//         padded = Math.round(document.body.clientHeight * 0.9);
+//
+//     // if the height is too big for the window, constrain it
+//     if (height > padded) {
+//         height = padded;
+//         width = Math.round(height * this.ratio);
+//     }
+//
+//     // set the width and height matching the aspect ratio
+//     el.style.width = width + 'px';
+//     el.style.height = height + 'px';
+//
+//     return {
+//         width: width,
+//         height: height
+//     };
+// }
