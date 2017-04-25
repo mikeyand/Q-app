@@ -10,11 +10,8 @@ body{
 }
 
 .button-container {
-	width: 1200px;
 	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	margin-left: 15px;
+	right: -10px;
 	top: 10%;
 	z-index: 9;
 }
