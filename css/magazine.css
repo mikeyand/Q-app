@@ -10,8 +10,11 @@ body{
 }
 
 .button-container {
+	width: 924px;
 	position: absolute;
-	right: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-left: 15px;
 	top: 10%;
 	z-index: 9;
 }
@@ -34,7 +37,7 @@ body{
 }
 
 .btn {
-	font-size: 20px !important;
+	font-size: 18px;
 }
 
 .magazine-viewport .container{
@@ -68,7 +71,7 @@ body{
 .magazine .region{
 	position:absolute;
 	overflow:hidden;
-	box-shadow: 7px 7px 10px #423b3b;
+	box-shadow: 7px 7px 5px #888888;
 	border: 3px solid #ffffff;
 	-webkit-border-radius:100%;
 	-moz-border-radius:100%;
@@ -81,12 +84,11 @@ body{
 	display: none;
 }
 
-/*.magazine .region:hover{
+.magazine .region:hover{
 	opacity:0.5;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 	filter: alpha(opacity=50);
-	border: 2px solid #333;
-}*/
+}
 
 .magazine .region.zoom{
 	opacity:0.01;

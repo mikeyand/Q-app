@@ -205,7 +205,7 @@ function isChrome() {
 }
 
 function disableControls(page) {
-		if (page==2)
+		if (page==1)
 			$('.previous-button').hide();
 		else
 			$('.previous-button').show();
@@ -220,16 +220,15 @@ function disableControls(page) {
 
 function resizeViewport() {
 
-	var width = $(window).width(),
-		height = $(window).height(),
+	var width = $(window).innerWidth(),
+		height = $(window).innerHeight(),
 		options = $('.magazine').turn('options');
 
 	$('.magazine').removeClass('animated');
 
 	$('.magazine-viewport').css({
-		width: width - 100,
-		height: height,
-		left: 50
+		width: width - 25,
+		height: height
 	}).
 	zoom('resize');
 
@@ -253,11 +252,11 @@ function resizeViewport() {
 			if ($('.magazine').turn('page')==1)
 				$('.magazine').turn('peel', 'br');
 
-			// $('.next-button').css({height: bound.height, backgroundPosition: '-38px '+(bound.height/2-32/2)+'px'});
-			// $('.previous-button').css({height: bound.height, backgroundPosition: '-4px '+(bound.height/2-32/2)+'px'});
+			$('.next-button').css({height: bound.height, backgroundPosition: '-38px '+(bound.height/2-32/2)+'px'});
+			$('.previous-button').css({height: bound.height, backgroundPosition: '-4px '+(bound.height/2-32/2)+'px'});
 		}
 
-		$('.magazine').css({top: -bound.height/2 + 50, left: -bound.width/2 - 15});
+		$('.magazine').css({top: -bound.height/2, left: -bound.width/2});
 	}
 
 	var magazineOffset = $('.magazine').offset(),
@@ -297,44 +296,6 @@ function moveBar(yes) {
 	if (Modernizr && Modernizr.csstransforms) {
 		$('#slider .ui-slider-handle').css({zIndex: yes ? -1 : 10000});
 	}
-}
-
-function setPreview(view) {
-
-	var previewWidth = 112,
-		previewHeight = 73,
-		previewSrc = 'pages/preview.jpg',
-		preview = $(_thumbPreview.children(':first')),
-		numPages = (view==1 || view==$('#slider').slider('option', 'max')) ? 1 : 2,
-		width = (numPages==1) ? previewWidth/2 : previewWidth;
-
-	_thumbPreview.
-		addClass('no-transition').
-		css({width: width + 15,
-			height: previewHeight + 15,
-			top: -previewHeight - 30,
-			left: ($($('#slider').children(':first')).width() - width - 15)/2
-		});
-
-	preview.css({
-		width: width,
-		height: previewHeight
-	});
-
-	if (preview.css('background-image')==='' ||
-		preview.css('background-image')=='none') {
-
-		preview.css({backgroundImage: 'url(' + previewSrc + ')'});
-
-		setTimeout(function(){
-			_thumbPreview.removeClass('no-transition');
-		}, 0);
-
-	}
-
-	preview.css({backgroundPosition:
-		'0px -'+((view-1)*previewHeight)+'px'
-	});
 }
 
 // Width of the flipbook when zoomed in
@@ -384,33 +345,3 @@ function calculateBound(d) {
 
 	return bound;
 }
-
-// window.addEventListener('resize', function (e) {
-//     var size = resize(el);
-//     $(el).turn('size', size.width, size.height);
-// });
-//
-// function resize(el) {
-//     // reset the width and height to the css defaults
-//     el.style.width = '';
-//     el.style.height = '';
-//
-//     var width = el.clientWidth,
-//         height = Math.round(width / this.ratio),
-//         padded = Math.round(document.body.clientHeight * 0.9);
-//
-//     // if the height is too big for the window, constrain it
-//     if (height > padded) {
-//         height = padded;
-//         width = Math.round(height * this.ratio);
-//     }
-//
-//     // set the width and height matching the aspect ratio
-//     el.style.width = width + 'px';
-//     el.style.height = height + 'px';
-//
-//     return {
-//         width: width,
-//         height: height
-//     };
-// }

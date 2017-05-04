@@ -43,9 +43,6 @@
 <body>
 
 <div id="canvas" class="remodal-bg">
-
-
-<div class="magazine-viewport">
   <div class="button-container">
     <button type="button" class="btn btn-default home">
       <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
@@ -57,6 +54,10 @@
       <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span>
     </button>
   </div>
+
+<div class="zoom-icon zoom-icon-in"></div>
+
+<div class="magazine-viewport">
 	<div class="container">
 		<div class="magazine">
 			<!-- Next button -->
@@ -165,11 +166,11 @@ function loadApp() {
 
 			// Magazine width
 
-			width: 1200,
+			width: 924,
 
 			// Magazine height
 
-			height: 446,
+			height: 343,
 
 			// Duration in millisecond
 
@@ -385,7 +386,7 @@ function loadApp() {
 		nop: function(path) {
 
 			if ($('.magazine').turn('is'))
-				$('.magazine').turn('page', 1);
+				$('.magazine').turn('page', 2);
 		}
 	});
 
@@ -563,7 +564,7 @@ setTimeout(function(){
   $('.region.text-twelve').attr("data-remodal-target", "modal12");
   $('.region.text-thirteen').attr("data-remodal-target", "modal13");
 
-}, 500);
+}, 1500);
 
 
 
