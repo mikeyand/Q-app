@@ -1,22 +1,22 @@
 [{
 	"x":40,
 	"y":10,
-	"width":80,
-	"height":80,
+	"width":60,
+	"height":60,
 	"class":"text-eight"
 },
 {
-	"x":310,
-	"y":130,
-	"width":80,
-	"height":80,
+	"x":240,
+	"y":95,
+	"width":60,
+	"height":60,
 	"class":"text-nine"
 },
 {
-	"x":310,
-	"y":240,
-	"width":80,
-	"height":80,
+	"x":240,
+	"y":190,
+	"width":60,
+	"height":60,
 	"class":"text-ten"
 }
 ]

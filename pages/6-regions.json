@@ -1,22 +1,22 @@
 [{
-	"x":230,
-	"y":70,
-	"width":80,
-	"height":80,
+	"x":170,
+	"y":55,
+	"width":60,
+	"height":60,
 	"class":"text-eleven"
 },
 {
-	"x":170,
-	"y":145,
-	"width":80,
-	"height":80,
+	"x":120,
+	"y":110,
+	"width":60,
+	"height":60,
 	"class":"text-twelve"
 },
 {
-	"x":240,
-	"y":300,
-	"width":100,
-	"height":100,
+	"x":180,
+	"y":230,
+	"width":80,
+	"height":80,
 	"class":"text-thirteen"
 }
 ]
